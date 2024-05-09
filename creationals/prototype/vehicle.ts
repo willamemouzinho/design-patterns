@@ -8,17 +8,6 @@ export abstract class Vehicle {
 		this._model = model;
 		this._color = color;
 	}
-	// protected constructor(vehicle: Vehicle) {
-	// 	this._brand = vehicle._brand;
-	// 	this._model = vehicle._model;
-	// 	this._color = vehicle._color;
-	// }
-
-	// protected createVehicle(vehicle: Vehicle) {
-	// 	this._brand = vehicle._brand;
-	// 	this._model = vehicle._model;
-	// 	this._color = vehicle._color;
-	// }
 
 	public abstract clone(): Vehicle;
 

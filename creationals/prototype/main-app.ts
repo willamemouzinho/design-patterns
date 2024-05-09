@@ -1,17 +1,26 @@
-List<Vehicle> vehicles = List.of(
-   new Car("car_brand", "car_model", "car_color", 300),
-   new Bus("bus_brand", "bus_model", "bus_color", 8)
-);
+import { Bus } from "./bus";
+import { Car } from "./car";
+import type { Vehicle } from "./vehicle";
+import { VehicleCache } from "./vehicle-cache";
 
-List<Vehicle> copyList = new ArrayList<>();
-for (Vehicle vehicle : vehicles) {
-copyList.add(vehicle.clone());
+const vehicles: Vehicle[] = [
+	new Car("car_brand", "car_model", "car_color", 300),
+	new Bus("bus_brand", "bus_model", "bus_color", 8),
+];
+
+const copyList: Vehicle[] = [];
+for (const vehicle of vehicles) {
+	copyList.push(vehicle);
 }
 
-copyList.forEach(System.out::println);
+for (const vehicle of copyList) {
+	console.log(vehicle);
+	console.log("\n");
+}
 
-System.out.println("==========================================");
+console.log("==========================================\n");
 
-VehicleCache registry = new VehicleCache();
+const registry: VehicleCache = new VehicleCache();
 registry.put(vehicles);
-System.out.println(registry.get("car_brand car_model"));
+console.log(registry.getCache());
+console.log(registry.get("car_brand car_model"));

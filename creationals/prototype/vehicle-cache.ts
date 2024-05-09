@@ -2,7 +2,7 @@ import { Bus } from "./bus";
 import { Car } from "./car";
 import type { Vehicle } from "./vehicle";
 
-export class Vehicle_Cache {
+export class VehicleCache {
 	private readonly _cache: Map<string, Vehicle> = new Map<string, Vehicle>();
 
 	constructor() {
@@ -17,9 +17,16 @@ export class Vehicle_Cache {
 		return this._cache.get(key) as Vehicle;
 	}
 
+	public getCache() {
+		return this._cache;
+	}
+
 	public put(vehicles: Vehicle[]): void {
 		for (const vehicle of vehicles) {
 			this._cache.set(`${vehicle.getBrand()} ${vehicle.getModel()}`, vehicle);
 		}
 	}
 }
+
+// const vehicleCache = new VehicleCache();
+// console.log(vehicleCache);

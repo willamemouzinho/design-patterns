@@ -8,13 +8,12 @@ export class Car extends Vehicle {
 		this._topSpeed = topSpeed;
 	}
 
-	// private constructor(car: Car) {
-	// 	super(car);
-	// 	this._topSpeed = car._topSpeed;
-	// }
-
 	public clone(): Vehicle {
 		const clone: Vehicle = Object.create(this);
 		return clone;
+	}
+
+	public getTopSpeed(): number {
+		return this._topSpeed;
 	}
 }

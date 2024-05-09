@@ -8,13 +8,12 @@ export class Bus extends Vehicle {
 		this._doors = doors;
 	}
 
-	// private constructor(bus: Bus) {
-	// 	super(bus);
-	// 	this._doors = bus._doors;
-	// }
-
 	public clone(): Vehicle {
 		const clone: Vehicle = Object.create(this);
 		return clone;
+	}
+
+	public getDoors(): number {
+		return this._doors;
 	}
 }

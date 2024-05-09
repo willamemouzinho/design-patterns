@@ -1,7 +1,7 @@
 export abstract class Pizza {
-	protected sauce!: string;
-	protected toppings!: string;
-	protected crust!: string;
+	protected sauce: string | null = null;
+	protected toppings: string | null = null;
+	protected crust: string | null = null;
 
 	public abstract assemble(): void;
 	public abstract qualityCheck(): void;

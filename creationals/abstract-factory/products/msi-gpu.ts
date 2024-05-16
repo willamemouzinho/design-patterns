@@ -1,7 +1,7 @@
 import type { Gpu } from "./gpu";
 
 export class MsiGpu implements Gpu {
-	assemble(): void {
+	public assemble(): void {
 		// Logic relevant to MSI Monitors
 		console.log("Assembling MSI GPU");
 	}

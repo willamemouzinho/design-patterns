@@ -1,11 +1,16 @@
 import { Vehicle } from "./vehicle";
 
 export class Car extends Vehicle {
-	private _topSpeed: number;
+	private readonly topSpeed: number;
 
-	constructor(brand: string, model: string, color: string, topSpeed: number) {
+	public constructor(
+		brand: string,
+		model: string,
+		color: string,
+		topSpeed: number,
+	) {
 		super(brand, model, color);
-		this._topSpeed = topSpeed;
+		this.topSpeed = topSpeed;
 	}
 
 	public clone(): Vehicle {
@@ -14,6 +19,6 @@ export class Car extends Vehicle {
 	}
 
 	public getTopSpeed(): number {
-		return this._topSpeed;
+		return this.topSpeed;
 	}
 }

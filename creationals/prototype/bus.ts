@@ -1,11 +1,16 @@
 import { Vehicle } from "./vehicle";
 
 export class Bus extends Vehicle {
-	private _doors: number;
+	private readonly doors: number;
 
-	constructor(brand: string, model: string, color: string, doors: number) {
+	public constructor(
+		brand: string,
+		model: string,
+		color: string,
+		doors: number,
+	) {
 		super(brand, model, color);
-		this._doors = doors;
+		this.doors = doors;
 	}
 
 	public clone(): Vehicle {
@@ -14,6 +19,6 @@ export class Bus extends Vehicle {
 	}
 
 	public getDoors(): number {
-		return this._doors;
+		return this.doors;
 	}
 }

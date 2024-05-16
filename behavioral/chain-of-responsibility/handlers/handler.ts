@@ -1,17 +1,17 @@
 export abstract class Handler {
-	private _next: Handler | null = null;
+	private next: Handler | null = null;
 
 	public setNextHandler(next: Handler): Handler {
-		this._next = next;
+		this.next = next;
 		return next;
 	}
 
 	public abstract handle(username: string, password: string): boolean;
 
 	public handleNext(username: string, password: string): boolean {
-		if (this._next === null) {
+		if (this.next === null) {
 			return true;
 		}
-		return this._next.handle(username, password);
+		return this.next.handle(username, password);
 	}
 }

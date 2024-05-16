@@ -1,25 +1,25 @@
 export abstract class Vehicle {
-	private _brand: string;
-	private _model: string;
-	private _color: string;
+	private brand: string;
+	private model: string;
+	private color: string;
 
-	constructor(brand: string, model: string, color: string) {
-		this._brand = brand;
-		this._model = model;
-		this._color = color;
+	public constructor(brand: string, model: string, color: string) {
+		this.brand = brand;
+		this.model = model;
+		this.color = color;
 	}
 
 	public abstract clone(): Vehicle;
 
 	public getBrand(): string {
-		return this._brand;
+		return this.brand;
 	}
 
 	public getModel(): string {
-		return this._model;
+		return this.model;
 	}
 
 	public getColor(): string {
-		return this._color;
+		return this.color;
 	}
 }

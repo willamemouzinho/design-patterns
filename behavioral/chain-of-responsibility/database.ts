@@ -1,17 +1,17 @@
 export class Database {
-	private readonly _users: Map<string, string>;
+	private readonly users: Map<string, string>;
 
-	constructor() {
-		this._users = new Map();
-		this._users.set("admin_username", "admin_password");
-		this._users.set("user_username", "user_password");
+	public constructor() {
+		this.users = new Map();
+		this.users.set("adminusername", "adminpassword");
+		this.users.set("userusername", "userpassword");
 	}
 
 	public isValidUser(username: string): boolean {
-		return this._users.has(username);
+		return this.users.has(username);
 	}
 
 	public isValidPassword(username: string, password: string): boolean {
-		return this._users.get(username) === password;
+		return this.users.get(username) === password;
 	}
 }

@@ -1,5 +1,5 @@
 export class Singleton {
-	private static _instance: Singleton | null = null;
+	private static instance: Singleton | null = null;
 	private readonly data: string;
 
 	private constructor(data: string) {
@@ -7,10 +7,10 @@ export class Singleton {
 	}
 
 	public static getInstance(data: string) {
-		if (Singleton._instance === null) {
-			Singleton._instance = new Singleton(data);
+		if (Singleton.instance === null) {
+			Singleton.instance = new Singleton(data);
 		}
-		return Singleton._instance;
+		return Singleton.instance;
 	}
 
 	public getData(): string {

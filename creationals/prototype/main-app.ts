@@ -15,10 +15,9 @@ for (const vehicle of vehicles) {
 
 for (const vehicle of copyList) {
 	console.log(vehicle);
-	console.log("\n");
 }
 
-console.log("==========================================\n");
+console.log("\n==========================================\n");
 
 const registry: VehicleCache = new VehicleCache();
 registry.put(vehicles);

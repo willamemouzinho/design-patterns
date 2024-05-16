@@ -8,6 +8,7 @@ export class AsusManufacturer extends Company {
 	public createGpu(): Gpu {
 		return new AsusGpu();
 	}
+
 	public createMonitor(): Monitor {
 		return new AsusMonitor();
 	}

@@ -1,59 +1,64 @@
+import { randomInt } from "node:crypto";
 import type { Builder } from "./builder";
 import { Car } from "./car";
 
 export class CarBuilder implements Builder {
-	private _id!: number;
-	private _height!: number;
-	private _brand!: string;
-	private _model!: string;
-	private _color!: string;
-	private _engine!: string;
-	private _nbrOfDoors!: number;
+	private id: number;
+	private height!: number;
+	private brand!: string;
+	private model!: string;
+	private color!: string;
+	private engine!: string;
+	private nbrOfDoors!: number;
 
-	public id(id: number): CarBuilder {
-		this._id = id;
+	public constructor() {
+		this.id = randomInt(100);
+	}
+
+	public setId(id: number): CarBuilder {
+		this.id = id;
 		return this;
 	}
 
-	public brand(brand: string): CarBuilder {
-		this._brand = brand;
+	public setBrand(brand: string): CarBuilder {
+		this.brand = brand;
 		return this;
 	}
 
-	public model(model: string): CarBuilder {
-		this._model = model;
+	public setModel(model: string): CarBuilder {
+		this.model = model;
 		return this;
 	}
 
-	public color(color: string): CarBuilder {
-		this._color = color;
+	public setColor(color: string): CarBuilder {
+		this.color = color;
 		return this;
 	}
 
-	public height(height: number): CarBuilder {
-		this._height = height;
+	public setHeight(height: number): CarBuilder {
+		this.height = height;
 		return this;
 	}
 
-	public engine(engine: string): CarBuilder {
-		this._engine = engine;
+	public setEngine(engine: string): CarBuilder {
+		this.engine = engine;
 		return this;
 	}
 
-	public nbrOfDoors(nbrOfDoors: number): CarBuilder {
-		this._nbrOfDoors = nbrOfDoors;
+	public setNbrOfDoors(nbrOfDoors: number): CarBuilder {
+		this.nbrOfDoors = nbrOfDoors;
 		return this;
 	}
 
 	public build(): Car {
 		return new Car(
-			this._id,
-			this._brand,
-			this._model,
-			this._color,
-			this._height,
-			this._engine,
-			this._nbrOfDoors,
+			this.id,
+			this.brand,
+			this.model,
+			this.color,
+			this.height,
+			this.engine,
+			this.nbrOfDoors,
 		);
 	}
 }

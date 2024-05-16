@@ -3,27 +3,27 @@ import { Car } from "./car";
 import type { Vehicle } from "./vehicle";
 
 export class VehicleCache {
-	private readonly _cache: Map<string, Vehicle> = new Map<string, Vehicle>();
+	private readonly cache: Map<string, Vehicle> = new Map<string, Vehicle>();
 
-	constructor() {
+	public constructor() {
 		const car: Car = new Car("Bugatti", "Chiron", "Blue", 261);
 		const bus: Bus = new Bus("Mercedes", "Setra", "White", 48);
 
-		this._cache.set("Bugatti Chiron", car);
-		this._cache.set("Mercedes Setra", bus);
+		this.cache.set("Bugatti Chiron", car);
+		this.cache.set("Mercedes Setra", bus);
 	}
 
 	public get(key: string): Vehicle {
-		return this._cache.get(key) as Vehicle;
+		return this.cache.get(key) as Vehicle;
 	}
 
 	public getCache() {
-		return this._cache;
+		return this.cache;
 	}
 
 	public put(vehicles: Vehicle[]): void {
 		for (const vehicle of vehicles) {
-			this._cache.set(`${vehicle.getBrand()} ${vehicle.getModel()}`, vehicle);
+			this.cache.set(`${vehicle.getBrand()} ${vehicle.getModel()}`, vehicle);
 		}
 	}
 }

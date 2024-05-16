@@ -8,6 +8,7 @@ export class RoleCheckHandler extends Handler {
 		}
 
 		console.log("Loading Default Page...");
+
 		return this.handleNext(username, password);
 	}
 }

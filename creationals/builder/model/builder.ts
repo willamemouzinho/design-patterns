@@ -1,9 +1,9 @@
 export interface Builder {
-	id(id: number): Builder;
-	brand(brand: string): Builder;
-	model(model: string): Builder;
-	color(color: string): Builder;
-	height(height: number): Builder;
-	engine(engine: string): Builder;
-	nbrOfDoors(nbrOfDoors: number): Builder;
+	setId(id: number): Builder;
+	setBrand(brand: string): Builder;
+	setModel(model: string): Builder;
+	setColor(color: string): Builder;
+	setHeight(height: number): Builder;
+	setEngine(engine: string): Builder;
+	setNbrOfDoors(nbrOfDoors: number): Builder;
 }

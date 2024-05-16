@@ -5,7 +5,7 @@ import { UIService } from "./thirdparty/ui-service";
 import type { User } from "./thirdparty/user";
 
 export class BuyCryptoFacade {
-	public buyCrypyocurrency(amount: number, currency: string): void {
+	public buyCryptocurrency(amount: number, currency: string): void {
 		const dbService: DatabaseService = new DatabaseService();
 		const user: User = dbService.getUser(UIService.getLoggedUserId());
 

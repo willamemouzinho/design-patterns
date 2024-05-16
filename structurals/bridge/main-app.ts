@@ -9,7 +9,7 @@ const americanRestaurant: Restaurant = new AmericanRestaurant(
 );
 americanRestaurant.deliver();
 
-console.log("==========================================\n");
+console.log("\n==========================================\n");
 
 const italianRestaurant: Restaurant = new ItalianRestaurant(new VeggiePizza());
 italianRestaurant.deliver();

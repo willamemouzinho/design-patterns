@@ -7,15 +7,15 @@ export class ItalianRestaurant extends Restaurant {
 		super(pizza);
 	}
 
-	addSauce(): void {
+	public addSauce(): void {
 		this.pizza.setSauce("-");
 	}
 
-	addToppings(): void {
+	public addToppings(): void {
 		this.pizza.setToppings("Oil");
 	}
 
-	makeCrust(): void {
+	public makeCrust(): void {
 		this.pizza.setCrust("Thin");
 	}
 }

@@ -1,5 +1,7 @@
 export class Video {
-	constructor(public videoName: string) {
+	public videoName: string;
+
+	public constructor(videoName: string) {
 		this.videoName = videoName;
 	}
 }

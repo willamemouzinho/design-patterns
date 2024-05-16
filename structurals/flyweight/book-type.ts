@@ -1,23 +1,23 @@
 export class BookType {
-	private readonly _type: string;
-	private readonly _distributor: string;
-	private readonly _otherData: string;
+	private readonly type: string;
+	private readonly distributor: string;
+	private readonly otherData: string;
 
-	constructor(type: string, distributor: string, otherData: string) {
-		this._type = type;
-		this._distributor = distributor;
-		this._otherData = otherData;
+	public constructor(type: string, distributor: string, otherData: string) {
+		this.type = type;
+		this.distributor = distributor;
+		this.otherData = otherData;
 	}
 
 	public getType(): string {
-		return this._type;
+		return this.type;
 	}
 
 	public getDistributor(): string {
-		return this._distributor;
+		return this.distributor;
 	}
 
 	public getOtherData(): string {
-		return this._otherData;
+		return this.otherData;
 	}
 }

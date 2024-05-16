@@ -1,20 +1,21 @@
 import type { Box } from "../box";
 
 export abstract class Product implements Box {
-	public abstract calculatePrice(): number;
-	protected readonly title: string | null = null;
-	protected readonly price: number | null = null;
+	protected readonly title: string;
+	protected readonly price: number;
 
 	protected constructor(title: string, price: number) {
 		this.title = title;
 		this.price = price;
 	}
 
+	public abstract calculatePrice(): number;
+
 	protected getTitle(): string {
-		return this.title as string;
+		return this.title;
 	}
 
 	protected getPrice(): number {
-		return this.price as number;
+		return this.price;
 	}
 }

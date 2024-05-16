@@ -10,8 +10,8 @@ internet.connectTo("banned.com");
 console.log("\n==========================================\n");
 
 const videoDownloader: VideoDownloader = new ProxyVideoDownloader();
-videoDownloader.getVideo("geekific");
-videoDownloader.getVideo("geekific");
+videoDownloader.getVideo("willame");
+videoDownloader.getVideo("willame");
 videoDownloader.getVideo("likeNsub");
 videoDownloader.getVideo("likeNsub");
-videoDownloader.getVideo("geekific");
+videoDownloader.getVideo("willame");

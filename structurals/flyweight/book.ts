@@ -1,25 +1,25 @@
 import type { BookType } from "./book-type";
 
 export class Book {
-	private readonly _name: string;
-	private readonly _price: number;
-	private readonly _type: BookType;
+	private readonly name: string;
+	private readonly price: number;
+	private readonly type: BookType;
 
-	constructor(name: string, price: number, type: BookType) {
-		this._name = name;
-		this._price = price;
-		this._type = type;
+	public constructor(name: string, price: number, type: BookType) {
+		this.name = name;
+		this.price = price;
+		this.type = type;
 	}
 
 	public getName(): string {
-		return this._name;
+		return this.name;
 	}
 
 	public getPrice(): number {
-		return this._price;
+		return this.price;
 	}
 
 	public getType(): BookType {
-		return this._type;
+		return this.type;
 	}
 }

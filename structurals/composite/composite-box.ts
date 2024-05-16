@@ -8,9 +8,10 @@ export class CompositeBox implements Box {
 	}
 
 	public calculatePrice(): number {
-		return this.children.reduce(
+		const price: number = this.children.reduce(
 			(total, box) => total + box.calculatePrice(),
 			0,
 		);
+		return price;
 	}
 }

@@ -6,8 +6,8 @@ import type { User } from "./user";
 class SomeComplexStuff {}
 
 export abstract class CryptoService {
-	private _databaseService: DatabaseService | null = null;
-	private _complexStuff: SomeComplexStuff | null = null;
+	private databaseService: DatabaseService | null = null;
+	private complexStuff: SomeComplexStuff | null = null;
 
 	public abstract buyCurrency(user: User, amount: number): void;
 }

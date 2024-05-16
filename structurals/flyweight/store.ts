@@ -3,7 +3,7 @@ import { BookFactory } from "./book-factory";
 import type { BookType } from "./book-type";
 
 export class Store {
-	private readonly _books: Book[] = [];
+	private readonly books: Book[] = [];
 
 	public storeBook(
 		name: string,
@@ -17,11 +17,11 @@ export class Store {
 			distributor,
 			otherData,
 		);
-		this._books.push(new Book(name, price, bookType));
+		this.books.push(new Book(name, price, bookType));
 	}
 
 	public displayBooks(): void {
-		for (const book of this._books) {
+		for (const book of this.books) {
 			console.log(book);
 		}
 	}

@@ -10,7 +10,7 @@ const multiRestoApp = new MultiRestoApp();
 multiRestoApp.displayMenus(myData);
 multiRestoApp.displayRecommendations(myData);
 
-console.log("==========================================\n");
+console.log("\n==========================================\n");
 
 // New UI
 const adapter: IMultiRestoApp = new FancyUIServiceAdapter();

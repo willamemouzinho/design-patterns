@@ -7,9 +7,9 @@ export abstract class Restaurant {
 		this.pizza = pizza;
 	}
 
-	abstract addSauce(): void;
-	abstract addToppings(): void;
-	abstract makeCrust(): void;
+	public abstract addSauce(): void;
+	public abstract addToppings(): void;
+	public abstract makeCrust(): void;
 
 	public deliver(): void {
 		this.makeCrust();
@@ -17,6 +17,6 @@ export abstract class Restaurant {
 		this.addToppings();
 		this.pizza.assemble();
 		this.pizza.qualityCheck();
-		console.log("Order in Progress!\n");
+		console.log("Order in Progress!");
 	}
 }

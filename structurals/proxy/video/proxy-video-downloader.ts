@@ -3,15 +3,16 @@ import type { Video } from "./video";
 import type { VideoDownloader } from "./video-downloader";
 
 export class ProxyVideoDownloader implements VideoDownloader {
-	private readonly _videoCache: Map<string, Video> = new Map<string, Video>();
-	private readonly _downloader: VideoDownloader = new RealVideoDownloader();
+	private readonly videoCache: Map<string, Video> = new Map<string, Video>();
+	private readonly downloader: VideoDownloader = new RealVideoDownloader();
 
 	public getVideo(videoName: string): Video {
-		if (!this._videoCache.has(videoName)) {
-			this._videoCache.set(videoName, this._downloader.getVideo(videoName));
+		if (!this.videoCache.has(videoName)) {
+			this.videoCache.set(videoName, this.downloader.getVideo(videoName));
 		}
 		console.log("Retrieving video from cache...");
-		console.log("-----------------------");
-		return this._videoCache.get(videoName) as Video;
+		console.log("\n-----------------------\n");
+
+		return this.videoCache.get(videoName) as Video;
 	}
 }

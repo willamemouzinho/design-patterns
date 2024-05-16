@@ -7,15 +7,15 @@ export class AmericanRestaurant extends Restaurant {
 		super(pizza);
 	}
 
-	addSauce(): void {
+	public addSauce(): void {
 		this.pizza.setSauce("Super Secret Recipe");
 	}
 
-	addToppings(): void {
+	public addToppings(): void {
 		this.pizza.setToppings("Everything");
 	}
 
-	makeCrust(): void {
+	public makeCrust(): void {
 		this.pizza.setCrust("Thick");
 	}
 }
